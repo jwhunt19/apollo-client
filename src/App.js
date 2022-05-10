@@ -1,10 +1,13 @@
 import "./styles.css";
+import { Container } from '@mui/material';
+import { useQuery, gql } from "@apollo/client";
 
 export default function App() {
+
+
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
+    <Container maxWidth="xl" className="App">
+      <h1>Joey's URL Shortener</h1>
+    </Container>
   );
 }
