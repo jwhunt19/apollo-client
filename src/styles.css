@@ -1,4 +1,15 @@
+.MuiGrid-container > .MuiGrid-container {
+  border: #263849 2px solid;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 5px;
+}
+
 .App {
   font-family: sans-serif;
   text-align: center;
+}
+
+.list-item:nth-child() {
+  color: red;
 }

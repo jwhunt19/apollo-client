@@ -1,5 +1,6 @@
 import Link from "./Link";
 import { useQuery, gql } from "@apollo/client";
+import Grid from "@mui/material/Grid";
 
 export default function LinkList() {
   const LINKS = gql`
@@ -16,7 +17,11 @@ export default function LinkList() {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
 
-  return data.links.map(({ url, slug }) => (
-    <Link key={slug} url={url} slug={slug} />
-  ));
+  return (
+    <Grid container>
+      {data.links.map(({ url, slug }) => (
+        <Link key={slug} url={url} slug={slug} />
+      ))}
+    </Grid>
+  );
 }
