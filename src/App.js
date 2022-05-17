@@ -6,7 +6,6 @@ export default function App() {
   return (
     <Container maxWidth="xl" className="App">
       <h1>Joey's URL Shortener</h1>
-
       <LinkList />
     </Container>
   );

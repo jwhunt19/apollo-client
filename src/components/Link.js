@@ -23,7 +23,13 @@ export default function Link({ url, slug }) {
         </Button>
       </Grid>
       <Grid item xs={2} md={1}>
-        <Button variant="outlined" href={url}>
+        <Button
+          variant="outlined"
+          href={url}
+          onClick={() =>
+            window.location.assign(window.location.href + slug)
+          }
+        >
           <NavigateNextIcon />
         </Button>
       </Grid>
